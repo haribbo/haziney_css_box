@@ -1,0 +1,205 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@keyframes bounceIn2 {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) translate(-50%, -50%);
+    transform: scale3d(0.3, 0.3, 0.3) translate(-50%, -50%);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) translate(-50%, -50%);
+    transform: scale3d(1.1, 1.1, 1.1)  translate(-50%, -50%);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97) translate(-50%, -50%);
+    transform: scale3d(0.97, 0.97, 0.97) translate(-50%, -50%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    transform: scale3d(1, 1, 1) translate(-50%, -50%);
+  }
+}
+
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*
+ delay1 ; 0.7s;
+*/
+
+[data-scroll] {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: 0.3s;
+  transform-origin: center;
+}
+
+.main_sec1 .ani_img1[data-scroll="in"] {
+  animation-name: fadeInRight;
+}
+.main_sec1 .ani_img2[data-scroll="in"] {
+  animation-name: fadeInRight;
+  animation-delay: 0.4s;
+}
+.main_sec2 [class*=".ani"] {
+  animation-duration: 1s;
+}
+.main_sec2 .ani_img1[data-scroll="in"] {
+  animation-name:  fadeIn;
+  animation-delay: 0.5s;
+}
+.main_sec2 .ani_img2[data-scroll="in"] {
+  animation-name:  bounceIn;
+  animation-delay: 0.8s;
+}
+.main_sec2 .ani_img3[data-scroll="in"] {
+  animation-name:  bounceIn2;
+  transform-origin: left;
+  animation-delay: 1.2s;
+  animation-duration: 1.3s;
+}
+
+.main_sec2 .ani_img4[data-scroll="in"] {
+  animation-name:  bounceIn;
+  animation-delay: 0.4s;
+}
+.main_sec3 .ani_conts[data-scroll="in"] {
+  animation-delay: 0.8s;
+  animation-delay: 0.4s;
+  animation-name: fadeIn;
+}
+
+.main_sec3 .ani_conts.ani_conts2[data-scroll="in"] {
+  animation-delay: 1.2s;
+}
+
+.main_bottom_banner .ani_heading[data-scroll="in"] {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-delay: 0.4s;
+}
+.main_bottom_banner .ani_conts[data-scroll="in"] {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-delay: 0.8s;
+}
+.ani_icon {
+  transform: translate3d(0,0,0);
+}
+.ani_icon[data-scroll="in"] {
+  animation-name: bounceInUp;
+  animation-delay: 1.2s;
+}
+.ani_icon.a2 {
+  animation-delay: 1.5s;
+}
+.ani_icon.a3 {
+  animation-delay: 1.8s;
+}

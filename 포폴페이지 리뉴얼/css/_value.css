@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+:root {
+  --primary:#1360da;
+  --black-m:#191a1a;
+  --gray-m:#666;
+  --bg-m:#f1f1f1;
+  --fff-m:#eaeaea;
+  --ft-m:'Noto Sans KR', sans-serif;
+  --width-m:1100px;
+}
+
+ *{margin: 0; padding: 0; box-sizing: border-box;}
+h1,h2,h3,h4,h5 {color:var(--black-m); font-family: var(--ft-m); line-height: 1.35;}
+p,a,span,p a, p span {color:var(--gray-m); font-size: 18px; font-family: var(--ft-m); font-weight: 400; line-height: 1.5;}
+a {text-decoration: none; color:inherit; outline: none;}
+li {list-style: none;}
