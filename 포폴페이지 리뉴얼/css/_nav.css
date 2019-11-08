@@ -56,6 +56,7 @@ header nav ul li a {
   padding: 0 5px;
   color: var(--fff-m);
   font-weight: 500;
+  font-size: 16px;
 }
 
 
@@ -70,13 +71,9 @@ header:hover a {
 
 
 /* media Query */
-@media (max-width:360px) {
-  header {
-    position: relative;
-  }
-  header nav {
-    flex-direction: column;
-  }
+@media (max-width:600px) {
+  header {position: relative;}
+  header nav {flex-direction: column;}
   header nav ul {
     width: 100%;
     position: absolute;
@@ -84,25 +81,38 @@ header:hover a {
     margin-top:60px;
     flex-direction: column;
     background: red;
+    display: none;
   }
   /* .inner {padding: 0 20px;} */
-  .main_sec1 .inner { flex-direction: column; overflow: hidden;}
-  .main_sec1 .inner div.l {width: 100%;}
-  .main_sec1 .inner div.r {width: 100%;}
-  .main_sec1 .inner .r .sec1_img1 {width: 150px;}
-  .main_sec1 .inner .r .sec1_img2 {width: 300px;}
-  .main_sec1 .inner .r .sec1_img1 img,.main_sec1 .inner .r .sec1_img2 img {width: 100%;}
-  .main_sec2 {flex-direction: column;}
+  section.main_slider {padding: 0 70px;}
+  section.main_slider .ani_typo {height: auto;}
+  section.main_sec1 {min-height: 100vh; height: auto;}
+  .main_sec1 .inner { flex-direction: column; overflow: hidden; padding: 100px 0; box-sizing: content-box;}
+  .main_sec1 .inner div.l {width: 100%; text-align: center;}
+  .main_sec1 .inner div.l .icon_list {padding: 50px 20px; text-align: center; max-width: 100%;}
+  .main_sec1 .inner div.l .main_conts {max-width: 100%;   margin: 0 auto;}
+  .main_sec1 .inner div.r {width: 100%; position: relative; top:50px; min-height: 330px; padding-top:30px;}
+  .main_sec1 .inner div.r .sec1_img1 {width: 150px; top:170px;}
+  .main_sec1 .inner div.r .sec1_img2 {width: 300px; top:170px;}
+  .main_sec1 .inner div.r .sec1_img1 img,.main_sec1 .inner .r .sec1_img2 img {width: 100%;}
+  section.main_sec2 {flex-direction: column; padding: 100px 0; height: auto;}
   .main_sec2 div.l,.main_sec2 div.r { width: 100%;}
   .main_sec2 div.l {order:2;}
-  .main_sec2 .r .main_headings {}
+  .main_sec2 div.r { height: auto; padding-bottom: 20px;}
+  .main_sec2 div.r .main_headings { text-align: center; margin-bottom: 30px;}
+  .main_sec2 div.r .main_conts  { text-align: center; padding: 0 30px;}
   .main_sec2 .l .ani_item_box {transform: scale(0.9);}
   .main_sec2 .l .ani_item_box .sec2_img1 img{width: 100%;}
   .main_sec2 .l .ani_item_box .sec2_img2 {max-width: 100px;}
   .main_sec2 .l .ani_item_box .sec2_img3 {max-width: 150px;}
   .main_sec2 .l .ani_item_box .sec2_img4 {max-width: 100px;}
-  .main_sec3 {flex-direction: column; flex-wrap:wrap; height: auto;}
-  .main_sec3 div.inner {height: auto; flex-wrap: wrap;}
+  .main_sec3 {flex-direction: column; flex-wrap:wrap; height: auto; padding: 0 0 100px 0;}
+  section.main_sec3 h2 {font-size: 35px; max-width: 300px; margin: 0 auto;}
+  .main_sec3 p { padding: 20px 30px; max-width: 340px;}
+  .main_sec3 div.inner {height: auto; flex-wrap: wrap; padding: 0 30px; padding-top: 30px;}
   .main_sec3 div.inner::before {display: none;}
-  .main_sec3 .inner div.icon_box {width: 100%; margin-bottom: 15px;}
+  .main_sec3 .inner div.icon_box {width: 100%; margin-bottom: 15px; padding: 40px 0;}
+  section.main_bottom_banner {padding: 80px 30px;}
+  section.main_bottom_banner .main_headings p{font-size: 15px;}
+  section.main_bottom_banner .main_headings h2 {font-size: 30px;}
 }

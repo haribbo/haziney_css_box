@@ -1,3 +1,4 @@
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -20,8 +21,8 @@
   }
 }
 
-
 @keyframes bounceIn {
+
   from,
   20%,
   40%,
@@ -55,8 +56,8 @@
   }
 }
 
-
 @keyframes bounceIn2 {
+
   from,
   20%,
   40%,
@@ -75,7 +76,7 @@
 
   20% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) translate(-50%, -50%);
-    transform: scale3d(1.1, 1.1, 1.1)  translate(-50%, -50%);
+    transform: scale3d(1.1, 1.1, 1.1) translate(-50%, -50%);
   }
 
   80% {
@@ -90,8 +91,8 @@
   }
 }
 
-
 @keyframes bounceInUp {
+
   from,
   60%,
   75%,
@@ -129,10 +130,21 @@
   }
 }
 
+@keyframes slideInUp {
+  from {
+    animation-timing-function: cubic-bezier(.13,.93,.8,1.26);
+    top: 100%;
+  }
+
+  to {
+    animation-timing-function: cubic-bezier(.13,.93,.8,1.26);
+    top: 0;
+  }
+}
+
 /*
  delay1 ; 0.7s;
 */
-
 [data-scroll] {
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -144,32 +156,38 @@
 .main_sec1 .ani_img1[data-scroll="in"] {
   animation-name: fadeInRight;
 }
+
 .main_sec1 .ani_img2[data-scroll="in"] {
   animation-name: fadeInRight;
   animation-delay: 0.4s;
 }
+
 .main_sec2 [class*=".ani"] {
   animation-duration: 1s;
 }
+
 .main_sec2 .ani_img1[data-scroll="in"] {
-  animation-name:  fadeIn;
+  animation-name: fadeIn;
   animation-delay: 0.5s;
 }
+
 .main_sec2 .ani_img2[data-scroll="in"] {
-  animation-name:  bounceIn;
+  animation-name: bounceIn;
   animation-delay: 0.8s;
 }
+
 .main_sec2 .ani_img3[data-scroll="in"] {
-  animation-name:  bounceIn2;
+  animation-name: bounceIn2;
   transform-origin: left;
   animation-delay: 1.2s;
   animation-duration: 1.3s;
 }
 
 .main_sec2 .ani_img4[data-scroll="in"] {
-  animation-name:  bounceIn;
+  animation-name: bounceIn;
   animation-delay: 0.4s;
 }
+
 .main_sec3 .ani_conts[data-scroll="in"] {
   animation-delay: 0.8s;
   animation-delay: 0.4s;
@@ -185,21 +203,67 @@
   animation-name: fadeIn;
   animation-delay: 0.4s;
 }
+
 .main_bottom_banner .ani_conts[data-scroll="in"] {
   animation-duration: 1s;
   animation-name: fadeIn;
   animation-delay: 0.8s;
 }
+
 .ani_icon {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
+
 .ani_icon[data-scroll="in"] {
   animation-name: bounceInUp;
   animation-delay: 1.2s;
 }
+
 .ani_icon.a2 {
   animation-delay: 1.5s;
 }
+
 .ani_icon.a3 {
   animation-delay: 1.8s;
+}
+
+.slider_conts h2.ani_typo {
+  display: block;
+  max-width: 584px;
+  height: 82px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider_conts .ani_typo {
+  max-width: 526px;
+  height: 57px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.slider_conts h2.ani_typo .ani_typo_txt, .ani_typo_txt {
+  position: relative;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+  animation-name: slideInUp;
+  transform-origin: center;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+}
+
+.ani_typo_txt {
+  animation-duration: 0.6s;
+  animation-delay: 1s;
+}
+
+.ani_btn {
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+  animation-delay: 2s;
+  animation-name:fadeIn;
 }

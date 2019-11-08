@@ -1,0 +1,43 @@
+@import url("css/_value.css");
+@import url("css/_animate.css");
+@import url("newMain.css");
+@import url("css/_componets.css");
+
+.sub_showcase {
+  height: 360px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.sub_showcase .sub_showcase_conts {
+  color:#fff;
+  max-width: var(--width-m);
+  margin: 0 auto;
+  text-align: left;
+}
+.sub_showcase .sub_showcase_conts h2 {
+  display: block;
+  color: inherit;
+  line-height: 1.3;
+  width: 1100px;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+
+.sub_showcase .sub_showcase_conts p {
+  color: inherit;
+  font-size: 18px;
+}
+
+.page_heading {
+  font-size: 30px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.project_sec1 {
+  padding: 80px 0;
+}
